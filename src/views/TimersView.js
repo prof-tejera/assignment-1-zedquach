@@ -30,14 +30,18 @@ const TimersView = () => {
   ];
 
   return (
-    <Timers>
-      {timers.map((timer) => (
-        <Timer key={`timer-${timer.title}`}>
-          <TimerTitle>{timer.title}</TimerTitle>
-          {timer.C}
-        </Timer>
-      ))}
-    </Timers>
+    <div
+      style={{
+        backgroundColor: "#060126",
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Stopwatch />
+    </div>
   );
 };
 

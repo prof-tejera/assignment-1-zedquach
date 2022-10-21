@@ -1,0 +1,9 @@
+.clock {
+  font-family: "Inconsolata", monospace;
+  color: #f2b705;
+  font-size: 80px;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: 2;
+}
