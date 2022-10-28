@@ -3,12 +3,17 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 
 import DocumentationView from "./views/DocumentationView";
-import TimersView from "./views/TimersView";
+import Countdown from "./components/timers/Countdown";
+import XY from "./components/timers/XY";
+import Tabata from "./components/timers/Tabata";
+import Stopwatch from "./components/timers/Stopwatch";
 
 const Container = styled.div`
-  background: #f0f6fb;
+  background: #060126;
   height: 100vh;
-  overflow: auto;
+  width: 100vw;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 `;
 
 const Nav = () => {
@@ -16,11 +21,18 @@ const Nav = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/">Timers</Link>
+          <Link to="/">Countdown</Link>
         </li>
         <li>
-          <Link to="/docs">Documentation</Link>
+          <Link to="/stopwatch">Stopwatch</Link>
         </li>
+        <li>
+          <Link to="/xy">XY</Link>
+        </li>
+        <li>
+          <Link to="/tabata">Tabata</Link>
+        </li>
+
       </ul>
     </nav>
   );
@@ -32,8 +44,10 @@ const App = () => {
       <Router>
         <Nav />
         <Routes>
-          <Route path="/docs" element={<DocumentationView />} />
-          <Route path="/" element={<TimersView />} />
+          <Route path="/" element={<Countdown />} />
+          <Route path="/stopwatch" element={<Stopwatch />} />
+          <Route path="/xy" element={<XY />} />
+          <Route path="/tabata" element={<Tabata />} />
         </Routes>
       </Router>
     </Container>
