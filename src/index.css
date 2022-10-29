@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: fixed;
+  overflow: hidden;
 }
 
 code {
@@ -17,4 +19,8 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
 }
